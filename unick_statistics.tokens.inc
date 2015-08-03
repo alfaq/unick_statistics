@@ -8,7 +8,7 @@
 /**
  * Implements hook_token_info().
  */
-function statistics_token_info() {
+function unick_statistics_token_info() {
   $node['total-count'] = array(
     'name' => t("Number of views"),
     'description' => t("The number of visitors who have read the node."),
@@ -31,7 +31,7 @@ function statistics_token_info() {
 /**
  * Implements hook_tokens().
  */
-function statistics_tokens($type, $tokens, array $data = array(), array $options = array()) {
+function unick_statistics_tokens($type, $tokens, array $data = array(), array $options = array()) {
   $url_options = array('absolute' => TRUE);
   $replacements = array();
 

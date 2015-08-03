@@ -8,7 +8,7 @@
 /**
 * Root directory of Drupal installation.
 */
-define('DRUPAL_ROOT', substr($_SERVER['SCRIPT_FILENAME'], 0, strpos($_SERVER['SCRIPT_FILENAME'], '/modules/statistics/statistics.php')));
+define('DRUPAL_ROOT', substr($_SERVER['SCRIPT_FILENAME'], 0, strpos($_SERVER['SCRIPT_FILENAME'], '/sites/all/modules/unick_statistics/unick_statistics.php')));
 // Change the directory to the Drupal root.
 chdir(DRUPAL_ROOT);
 

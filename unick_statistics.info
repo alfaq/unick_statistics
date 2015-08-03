@@ -1,10 +1,9 @@
-name = Statistics
-description = Logs access statistics for your site.
+name = Unick Statistics
+description = Logs access unick statistics for your site.
 package = Core
 version = VERSION
 core = 7.x
-files[] = statistics.test
-configure = admin/config/system/statistics
+configure = admin/config/system/unick_statistics
 
 ; Information added by Drupal.org packaging script on 2015-06-17
 version = "7.38"

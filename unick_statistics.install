@@ -8,7 +8,7 @@
 /**
  * Implements hook_uninstall().
  */
-function statistics_uninstall() {
+function unick_statistics_uninstall() {
   // Remove variables.
   variable_del('statistics_count_content_views');
   variable_del('statistics_count_content_views_ajax');
@@ -23,7 +23,7 @@ function statistics_uninstall() {
 /**
  * Implements hook_schema().
  */
-function statistics_schema() {
+function unick_statistics_schema() {
   $schema['accesslog'] = array(
     'description' => 'Stores site access information for statistics.',
     'fields' => array(
@@ -144,7 +144,7 @@ function statistics_schema() {
 /**
  * Update the {accesslog}.sid column to match the length of {sessions}.sid
  */
-function statistics_update_7000() {
+function unick_statistics_update_7000() {
   db_change_field('accesslog', 'sid', 'sid', array(
     'type' => 'varchar',
     'length' => 128,
