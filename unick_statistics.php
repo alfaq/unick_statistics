@@ -14,15 +14,17 @@ chdir(DRUPAL_ROOT);
 
 include_once DRUPAL_ROOT . '/includes/bootstrap.inc';
 drupal_bootstrap(DRUPAL_BOOTSTRAP_VARIABLES);
+drupal_bootstrap(DRUPAL_BOOTSTRAP_SESSION);
+
 if (variable_get('statistics_count_content_views', 0) && variable_get('statistics_count_content_views_ajax', 0)) {
   $nid = $_POST['nid'];
   if (is_numeric($nid)) {
-		session_start();
+		drupal_session_start();
 		$first_time = true;
 		if (isset($_SESSION['nodes'])){
 			$nodes = explode(',',$_SESSION['nodes']);
-			if (!in_array(arg(1),$nodes)){
-				$nodes[] = arg(1);
+			if (!in_array($nid,$nodes)){
+				$nodes[] = $nid;
 			}else{
 				$first_time = false;
 			}
